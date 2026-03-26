@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Резюме Middle PHP Developer | Fullstack Developer</title>
+    <title>Резюме Developer | Fullstack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,6 +16,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            cursor: default;
         }
 
         body {
@@ -32,6 +33,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -54,6 +56,7 @@
             transform: translateY(30px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
+
         .fade-up.visible {
             opacity: 1;
             transform: translateY(0);
@@ -137,18 +140,20 @@
             text-align: center;
             margin-bottom: 28px;
         }
+
         .avatar {
             width: 140px;
             height: 140px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid white;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .avatar:hover {
             transform: scale(1.02);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
         }
 
         .section {
@@ -178,6 +183,7 @@
             transition: all 0.2s ease;
             color: #0f2b3d;
         }
+
         .skill-tag:hover {
             background: #2c7da0;
             border-color: #2c7da0;
@@ -232,6 +238,7 @@
             color: #1e2f3e;
             transition: all 0.2s;
         }
+
         .about-text:hover {
             background: #e6f2f9;
         }
@@ -242,6 +249,7 @@
             padding-bottom: 20px;
             transition: all 0.2s;
         }
+
         .job:hover {
             background: #fafcff;
             padding-left: 8px;
@@ -321,19 +329,22 @@
             gap: 24px;
             margin-top: 20px;
         }
+
         .project-card {
             background: #ffffff;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             border: 1px solid #eef2f8;
             cursor: pointer;
         }
+
         .project-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 25px -12px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.15);
         }
+
         .project-img {
             width: 100%;
             height: 160px;
@@ -345,25 +356,36 @@
             font-size: 3rem;
             color: #2c7da0;
             transition: transform 0.4s;
+            overflow: hidden;
+
         }
+
+        .project-img img {
+            max-width: 400px
+        }
+
         .project-card:hover .project-img {
             transform: scale(1.02);
         }
+
         .project-info {
             padding: 16px;
         }
+
         .project-title {
             font-weight: 700;
             font-size: 1.1rem;
             margin-bottom: 6px;
             color: #0f2b3d;
         }
+
         .project-desc {
             font-size: 0.85rem;
             color: #4a627a;
             margin-bottom: 12px;
             line-height: 1.4;
         }
+
         .project-link {
             font-size: 0.85rem;
             font-weight: 500;
@@ -372,6 +394,7 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
+            cursor: pointer;
         }
 
         .tech-stack {
@@ -389,21 +412,23 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.7);
+            background-color: rgba(0, 0, 0, 0.7);
             z-index: 1000;
             justify-content: center;
             align-items: center;
             backdrop-filter: blur(4px);
         }
+
         .modal-content {
             background: white;
-            max-width: 600px;
+            max-width: 90vw;
             width: 90%;
             border-radius: 28px;
             overflow: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
             animation: fadeInUp 0.3s ease;
         }
+
         .modal-header {
             background: #0f2b3d;
             color: white;
@@ -412,10 +437,12 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .modal-header h3 {
             font-size: 1.5rem;
             margin: 0;
         }
+
         .close-modal {
             background: none;
             border: none;
@@ -424,16 +451,22 @@
             color: white;
             transition: transform 0.2s;
         }
+
         .close-modal:hover {
             transform: scale(1.1);
         }
+
         .modal-body {
             padding: 24px;
             line-height: 1.5;
+            max-height: 70vh;
+            overflow: auto;
         }
+
         .modal-body p {
             margin-bottom: 12px;
         }
+
         .modal-body ul {
             margin-left: 20px;
             margin-bottom: 16px;
@@ -465,9 +498,11 @@
             .name-title h1 {
                 font-size: 2rem;
             }
+
             .projects-gallery {
                 grid-template-columns: 1fr;
             }
+
             .modal-content {
                 width: 95%;
                 margin: 20px;
@@ -481,35 +516,44 @@
                 padding: 0;
                 margin: 0;
             }
+
             .resume-container {
                 box-shadow: none;
                 border-radius: 0;
                 max-width: 100%;
             }
+
             .badge-salary {
                 background: #e9ecef;
                 color: #0f2b3d;
                 border: 1px solid #ccc;
             }
+
             .sidebar {
                 background: #f5f5f5;
             }
+
             .contact-info a {
                 color: black;
             }
+
             .project-card {
                 break-inside: avoid;
                 page-break-inside: avoid;
             }
+
             .modal {
                 display: none;
             }
+
             .project-card {
                 cursor: default;
             }
+
             .project-card:hover {
                 transform: none;
             }
+
             .fade-up {
                 opacity: 1 !important;
                 transform: none !important;
@@ -541,7 +585,7 @@
             <div class="sidebar fade-up">
                 <!-- ФОТОГРАФИЯ -->
                 <div class="photo-section">
-                    <img class="avatar" src="./IMG8.jpg" alt="Дмитриев Антон Сергеевич">
+                    <img class="avatar" src="./mi.jpg" alt="Дмитриев Антон Сергеевич">
                     <!-- Здесь можно заменить на реальную ссылку на фото кандидата -->
                 </div>
 
@@ -612,26 +656,22 @@
             <!-- right content: опыт, проекты, портфолио -->
             <div class="right-content">
                 <div class="about-text fade-up">
-                    <p>
-                        Fullstack-разработчик с опытом 7 лет, сочетаю экспертизу в веб-разработке (PHP, .NET) с
-                        глубокими
-                        компетенциями в области кибербезопасности, администрирования Linux-инфраструктуры и работы с
-                        высоконагруженными аналитическими системами (ClickHouse, Elasticsearch).
-                    </p><br>
-                    <p>
-                        Имею успешный опыт работы в Бизнес-школе Сколково (разработка обучающих игр) и с крупным
-                        корпоративным сектором — компания Новатэк (разработка личного кабинета для юридических и
-                        физических
-                        лиц). Участвовал в восстановлении веб-инфраструктуры после масштабных кибератак на российский
-                        сегмент интернета, что дало практический опыт в области защиты и экстренного восстановления
-                        высоконагруженных проектов.
-                    </p><br>
-                    <p>
-                        Способен как разрабатывать сложные CRM-системы, интернет-магазины и аналитические платформы, так
-                        и
-                        обеспечивать безопасность и стабильность серверной инфраструктуры на всех этапах — от
-                        проектирования
-                        архитектуры до мониторинга и реагирования на инциденты.
+                    <p>Fullstack-разработчик с опытом 10 лет, сочетаю экспертизу в веб-разработке (PHP, .NET) с глубокими
+                    компетенциями в области кибербезопасности, администрирования Linux-инфраструктуры и работы с
+                    высоконагруженными аналитическими системами (ClickHouse, Elasticsearch).</p><br>
+                        <p>
+                    Имею успешный опыт работы в Бизнес-школе Сколково (разработка обучающих игр) и с крупным
+                    корпоративным сектором — компания Новатэк (разработка личного кабинета для юридических и физических
+                    лиц). Участвовал в восстановлении веб-инфраструктуры после масштабных кибератак на российский
+                    сегмент интернета, что дало практический опыт в области защиты и экстренного восстановления
+                    высоконагруженных проектов.
+                        </p><br>
+                        <p>
+                    Способен как разрабатывать сложные CRM-системы, интернет-магазины и аналитические платформы, так и
+                    обеспечивать безопасность и стабильность серверной инфраструктуры на всех этапах — от проектирования
+                    архитектуры до мониторинга и реагирования на инциденты. Активно участвую в развитии команды: провожу
+                    технические собеседования, выступаю ментором для младших разработчиков, выстраиваю процессы code
+                    review и передачи знаний.
                     </p>
                 </div>
 
@@ -646,6 +686,10 @@
                         </div>
                         <div class="company">Afterlogic Rus</div>
                         <ul class="job-desc">
+                            <li><strong>Бизнес-школа Сколково</strong> – разработка интерактивных обучающих игр (PHP/JS,
+                                сценарная логика, рейтинги).</li>
+                            <li><strong>Новатэк (личный кабинет)</strong> – разработка на .NET Core / C#, интеграция
+                                биллинга, документооборот, безопасность персональных данных.</li>
                             <li>Разработка и поддержка b2b продуктов на PHP, внедрение OWASP-защиты.</li>
                             <li>Оптимизация SQL-запросов, рефакторинг легаси кода, миграция на Docker.</li>
                             <li>Интеграция Elasticsearch для быстрого поиска и аналитики логов.</li>
@@ -659,10 +703,7 @@
                         </div>
                         <div class="company">Фриланс / ИП (Сколково, Новатэк)</div>
                         <ul class="job-desc">
-                            <li><strong>Бизнес-школа Сколково</strong> – разработка интерактивных обучающих игр (PHP/JS,
-                                сценарная логика, рейтинги).</li>
-                            <li><strong>Новатэк (личный кабинет)</strong> – разработка на .NET Core / C#, интеграция
-                                биллинга, документооборот, безопасность персональных данных.</li>
+
                             <li>Настройка серверов Linux, внедрение ClickHouse для аналитики использования кабинета
                                 (миллионы событий).</li>
                             <li>Построение ELK-стека для логирования и мониторинга производительности.</li>
@@ -703,13 +744,18 @@
 
                     <div class="job fade-up">
                         <div class="job-header">
-                            <div class="job-title">Веб-разработчик (старт карьеры)</div>
-                            <div class="job-date">Март 2019 — Янв 2020</div>
+                            <div class="job-title">Веб-разработчик</div>
+                            <div class="job-date">Март 2017 — Янв 2019</div>
                         </div>
                         <div class="company">Фриланс / частная практика</div>
                         <ul class="job-desc">
-                            <li>Разработка сайтов на PHP/WordPress, первые проекты с Linux-серверами и основами сетевой
-                                безопасности.</li>
+                            <li>
+                                Разработка сайтов на PHP/WordPress
+                            </li>
+                            <li>
+                                Проекты с Linux-серверами и основами сетевой
+                                безопасности.
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -718,62 +764,60 @@
                 <div class="section">
                     <div class="section-title fade-up"><i class="fas fa-images"></i> Проекты и портфолио</div>
                     <div class="projects-gallery">
-                        <!-- Карточка проекта 1 -->
-                        <div class="project-card fade-up" data-project="ottokar">
-                            <div class="project-img">
-                                <i class="fas fa-store fa-3x"></i>
-                            </div>
-                            <div class="project-info">
-                                <div class="project-title">Ottokar39.ru</div>
-                                <div class="project-desc">Интернет-магазин интим-товаров с кастомной CRM, интеграцией платежей и оптимизированной структурой БД.</div>
-                                <div class="project-link">Подробнее <i class="fas fa-arrow-right"></i></div>
-                            </div>
-                        </div>
-                        <!-- Карточка проекта 2 -->
-                        <div class="project-card fade-up" data-project="trihology">
-                            <div class="project-img">
-                                <i class="fas fa-flask fa-3x"></i>
-                            </div>
-                            <div class="project-info">
-                                <div class="project-title">Trihology.pro</div>
-                                <div class="project-desc">Медицинский портал с личным кабинетом, онлайн-консультациями и поиском по Elasticsearch.</div>
-                                <div class="project-link">Подробнее <i class="fas fa-arrow-right"></i></div>
-                            </div>
-                        </div>
+
                         <!-- Карточка проекта 3 (Сколково) -->
-                        <div class="project-card fade-up" data-project="skolkovo">
+                        <div class="project-card fade-up" data-project="ottokar39">
                             <div class="project-img">
-                                <i class="fas fa-gamepad fa-3x"></i>
+                                <img src="./706370907.jpeg" alt="">
                             </div>
                             <div class="project-info">
-                                <div class="project-title">Обучающие игры (Сколково)</div>
-                                <div class="project-desc">Интерактивные бизнес-симуляторы на PHP/JS, рейтинги, сценарная логика, интеграция с LMS.</div>
+                                <div class="project-title">ottokar39.ru</div>
+                                <div class="project-desc">Сайт-агрегатор подержанных автомобилей с интеграцией
+                                    специализированных дилерских сервисов и большой системой хранения данных.</div>
                                 <div class="project-link">Подробнее <i class="fas fa-arrow-right"></i></div>
                             </div>
                         </div>
                         <!-- Карточка проекта 4 (Новатэк) -->
                         <div class="project-card fade-up" data-project="novatek">
                             <div class="project-img">
-                                <i class="fas fa-user-circle fa-3x"></i>
+                                <img src="./image copy 2.png" alt="">
                             </div>
                             <div class="project-info">
                                 <div class="project-title">Личный кабинет Новатэк</div>
-                                <div class="project-desc">.NET Core, биллинг для юр/физ лиц, защита данных, высокая нагрузка.</div>
+                                <div class="project-desc">PHP, Laravel, интеграция 1C биллинг для юр/физ лиц, защита
+                                    данных, высокая
+                                    нагрузка.</div>
                                 <div class="project-link">Подробнее <i class="fas fa-arrow-right"></i></div>
                             </div>
                         </div>
-                        <div class="project-card fade-up" data-project="novatek">
+                        <div class="project-card fade-up" data-project="anticandida">
                             <div class="project-img">
-                                <i class="fas fa-user-circle fa-3x"></i>
+                                <img src="./Group 13.png" alt="">
                             </div>
                             <div class="project-info">
                                 <div class="project-title">Anticandida и body-balance</div>
-                                <div class="project-desc">.NET Core, биллинг для юр/физ лиц, защита данных, высокая нагрузка.</div>
+                                <div class="project-desc">Интернет-магазин и справочник для медицинской компании с
+                                    CRM-системой для учета пациентов.</div>
                                 <div class="project-link">Подробнее <i class="fas fa-arrow-right"></i></div>
                             </div>
                         </div>
+
+                        <div class="project-card fade-up" data-project="skolkovo">
+                            <div class="project-img">
+                                <img src="./intro-2.webp" alt="">
+                            </div>
+                            <div class="project-info">
+                                <div class="project-title">Сколково игры</div>
+                                <div class="project-desc">Обучающие игры для Сколковской бизнес-школы (SKOLKOVO) для
+                                    высшего менеджмента, направленные на развитие коммуникаций.</div>
+                                <div class="project-link">Подробнее <i class="fas fa-arrow-right"></i></div>
+                            </div>
+                        </div>
+
+
                     </div>
-                    <div style="font-size: 0.85rem; color: #3c6578; margin-top: 12px;">* По проектам, отмеченным NDA, предоставляю дополнительные детали при собеседовании.</div>
+                    <div style="font-size: 0.85rem; color: #3c6578; margin-top: 12px;">* По проектам, отмеченным NDA,
+                        предоставляю дополнительные детали при собеседовании.</div>
                 </div>
 
                 <!-- технологии + преимущества -->
@@ -795,9 +839,9 @@
                 <div class="section fade-up">
                     <div class="section-title"><i class="fas fa-medal"></i> Ключевые преимущества</div>
                     <ul class="job-desc" style="margin-top: 0;">
-                        <li>✅ 7 лет коммерческой разработки + экспертиза в кибербезопасности и администрировании</li>
+                        <li>✅ 10 лет коммерческой разработки + экспертиза в кибербезопасности и администрировании</li>
                         <li>✅ Работа с корпоративными гигантами: Сколково, Новатэк (высокие нагрузки, безопасность,
-                            .NET/PHP)</li>
+                            .NET/PHP), Тинькофф, TEVA</li>
                         <li>✅ ClickHouse, Elasticsearch – построение аналитики, high‑load поиск и логирование</li>
                         <li>✅ Практический опыт восстановления инфраструктуры после крупных кибератак (2022)</li>
                         <li>✅ Готовность к полному циклу: от ТЗ и архитектуры до деплоя и защиты серверов</li>
@@ -814,7 +858,10 @@
                 <h3 id="modalTitle">Название проекта</h3>
                 <button class="close-modal">&times;</button>
             </div>
-            <div class="modal-body" id="modalBody">
+            <div class="modal-body">
+                <div class="modal-text" id="modalBody">
+
+                </div>
                 <!-- сюда подгружается описание -->
             </div>
         </div>
@@ -823,40 +870,68 @@
     <script>
         // Данные проектов для модальных окон
         const projectsData = {
-            ottokar: {
-                title: "Ottokar39.ru",
+            ottokar39: {
+                title: "ottokar39.ru",
                 description: `
-                    <p><strong>Интернет-магазин интим-товаров</strong> с полным циклом разработки.</p>
-                    <ul>
-                        <li>Разработка кастомной CRM-системы для управления заказами и клиентами.</li>
-                        <li>Интеграция платежных систем (банковские карты, электронные кошельки).</li>
-                        <li>Оптимизация структуры базы данных для высоких нагрузок (до 10k+ посещений в день).</li>
-                        <li>Реализация системы скидок, купонов, рекомендаций товаров.</li>
-                        <li>Настройка безопасности: защита от SQL-инъекций, XSS, SSL-сертификат.</li>
-                    </ul>
-                    <p>Технологии: PHP, Yii2, MySQL, JavaScript, jQuery, Docker, Nginx.</p>
-                    <p><a href="https://ottokar39.ru/" target="_blank">Перейти на сайт</a></p>
+                    <h2>Назначение проекта:</h2>
+                    <p>Разработка высоконагруженного веб-сайта-агрегатора (платформы)
+                    по продаже автомобилей с пробегом.
+                    Основная цель — объединить предложения от профессиональных дилеров и частных лиц в единой экосистеме, 
+                    обеспечивая пользователю максимальную прозрачность сделки, а дилерам — мощные инструменты для автоматизации бизнеса.</p>
+                    <p>Ключевые функциональные модули:<p>
+<ul><li>1. Ядро агрегатора (Frontend & Backend):
+Сбор и парсинг данных: Автоматический импорт объявлений из внешних источников (сайты дилеров, классифайды) и ручное размещение.
+Умный поиск и фильтрация: Мультипараметрический поиск с учетом геолокации, истории обслуживания, количества владельцев, наличия ДТП. Использование полнотекстового поиска (Elasticsearch) для мгновенных результатов.
+Карточка автомобиля: Расширенный отчет на основе VIN-номера (история регистраций, участие в ДТП, пробег, залоги в банках).</li>
+
+<li>2. Интеграция со специализированными дилерскими сервисами (API):
+Платформа не просто хранит объявления, а интегрируется в CRM- и ERP-системы дилерских центров:
+Синхронизация остатков: Автоматическое обновление статусов (в наличии/продано) при изменении в учетной системе дилера.
+DMS (Дилерские системы управления): Интеграция для выгрузки автомобилей напрямую из складских программ дилера без участия менеджера.
+Финансовые сервисы: Подключение модулей скоринга и кредитования (банки-партнеры), расчет каско и ОСАГО, сервисы trade-in с автоматической оценкой.
+Логистика и безопасность: Интеграция с сервисами проверки юр. чистоты автомобиля, а также с платформами доставки автовозом и эскроу-сервисами (безопасные сделки).</li>
+
+<li>3. Большая система хранения данных (Big Data & DWH):
+Для обеспечения стабильности и аналитики реализуется масштабируемое хранилище:
+Архитектура: Использование комбинации реляционных баз данных (PostgreSQL) для транзакций и колоночных баз (ClickHouse) или Data Lake для аналитики.
+Масштабируемость: Горизонтальное масштабирование для обработки миллионов объявлений и высокого трафика (сотни тысяч уникальных посетителей в сутки).
+Аналитика и ценообразование: На оfvснове накопленных исторических данных система строит динамику цен, предсказывает ликвидность автомобиля и рекомендует дилерам оптимальную цену продажи (автоматический ценовой советник).
+Data Mining: Хранение истории просмотров, кликов и поведения пользователей для построения рекомендательных систем ("Вам также может понравиться").
+</li></ul>
+<p>
+Результат внедрения:
+Создание единой экосистемы, где покупатель получает доступ к верифицированным автомобилям от профессиональных дилеров с полной историей, а дилеры автоматизируют процесс продаж, получают инструменты для динамического управления ценами и расширяют географию сбыта за счет федерального охвата аудитории.
+</p>
                 `
             },
-            trihology: {
-                title: "Trihology.pro",
+            anticandida: {
+                title: "Anticandida и Body-balance",
                 description: `
-                    <p><strong>Медицинский портал</strong> с личным кабинетом пациентов и врачей.</p>
-                    <ul>
-                        <li>Разработка функционала онлайн-консультаций и записи к специалистам.</li>
-                        <li>Внедрение полнотекстового поиска через Elasticsearch (каталог статей, врачей).</li>
-                        <li>Создание личного кабинета с историей обращений, анализами и рецептами.</li>
-                        <li>Интеграция с внешними лабораториями через API.</li>
-                        <li>Обеспечение безопасности медицинских данных (ФЗ-152, шифрование).</li>
-                    </ul>
-                    <p>Технологии: PHP, Laravel, Elasticsearch, PostgreSQL, Redis, Docker.</p>
-                    <p><a href="https://trihology.pro/" target="_blank">Перейти на сайт</a></p>
+                    <p>Назначение проекта:</p>
+<p>Создание единой цифровой платформы для медицинской компании, объединяющей:</p>
+<p>Интернет-магазин — для продажи медицинских товаров (лекарства, средства реабилитации, косметика, медтехника) с возможностью заказа с доставкой или самовывозом.</p>
+<p>Справочник — структурированную базу знаний (услуги, врачи, отделения, статьи), помогающую пациентам ориентироваться в деятельности компании.</p>
+<p>CRM-систему — для комплексного учета пациентов, управления взаимодействиями, записи на прием, ведения истории обращений и интеграции с медицинскими информационными системами (МИС).</p><br>
+<p>Единая экосистема «сайт + интернет-магазин + CRM» позволяет:</p>
+<ul><li>
+Пациентам — быстро находить информацию, записываться к врачу, покупать товары в одном месте.
+</li>
+<li>
+Врачам — видеть полную историю пациента, назначать препараты и процедуры, не покидая рабочего места.
+</li>
+<li>
+Администраторам и менеджерам — вести учет без дублирования данных, сократить время на обработку звонков и записей.
+</li>
+<li>
+Руководству — получать прозрачную аналитику по продажам товаров и услуг, загрузке персонала и финансовым показателям.
+</li></ul>
                 `
             },
             skolkovo: {
                 title: "Обучающие игры (Сколково)",
                 description: `
-                    <p><strong>Интерактивные бизнес-симуляторы</strong> для Бизнес-школы Сколково.</p>
+                    <p>Цель проекта:
+Разработка серии иммерсивных обучающих игр (деловых симуляций, ролевых игр, кейсов) для программ Executive Education (EMBA, MBA, открытые программы) Сколковской бизнес-школы. Игры нацелены на развитие ключевых коммуникативных компетенций топ-менеджеров: стратегические переговоры, фасилитация, управление конфликтами, публичные выступления, выстраивание эффективных команд и кросс-функциональное взаимодействие.</p>
                     <ul>
                         <li>Разработка игровых механик на PHP/JS с ветвлением сценариев и системой оценки.</li>
                         <li>Интеграция с LMS-платформой для отслеживания прогресса слушателей.</li>
@@ -871,15 +946,19 @@
             novatek: {
                 title: "Личный кабинет Новатэк",
                 description: `
-                    <p><strong>Разработка личного кабинета для юридических и физических лиц</strong> в компании Новатэк.</p>
-                    <ul>
-                        <li>Проектирование и реализация на .NET Core / C# с использованием Entity Framework.</li>
-                        <li>Интеграция биллинговой системы для управления услугами и тарифами.</li>
-                        <li>Реализация документооборота: генерация актов, счетов, электронная подпись.</li>
-                        <li>Обеспечение безопасности персональных данных и транзакций (сертификация).</li>
-                        <li>Настройка высокой доступности и масштабируемости (кластеризация, кэширование).</li>
-                    </ul>
-                    <p>Технологии: .NET Core, C#, ASP.NET Core, Entity Framework, MS SQL, ClickHouse, Docker, Kubernetes.</p>
+                    <p>Назначение проекта: </br>
+Создание централизованной биллинговой платформы для автоматизации расчетов с клиентами — как физическими, так и юридическими лицами. Система обеспечивает полный жизненный цикл начислений, выставления счетов, учета платежей, интеграции с учетными системами (1С) и формирования отчетности. Ключевые требования: работа под высокой нагрузкой (тысячи транзакций в минуту), соответствие требованиям законодательства о защите данных (152-ФЗ, 54-ФЗ, КИИ) и надежная интеграция с внешними сервисами.</p>
+                    <p>Технологический стек</p>
+                    <ul><li>
+Backend: PHP 8.x, Laravel (или Laravel Octane для повышения производительности)
+</li><li>
+Базы данных: PostgreSQL (основная), Redis (кэш, очереди, сессии), ClickHouse (аналитика больших объемов транзакций)
+</li><li>
+Очереди и обработка: Laravel Horizon / RabbitMQ для асинхронной обработки платежей, генерации документов, интеграции с 1С
+</li><li>
+API: REST + OpenAPI (Swagger) для внешних систем, возможен GraphQL для сложных запросов
+</li><li>
+Инфраструктура: Docker, балансировщики нагрузки (Nginx), горизонтальное масштабирование (Kubernetes), CDN для статики</li></ul>
                     <p><i>По NDA детали уточняются при собеседовании.</i></p>
                 `
             }
