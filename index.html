@@ -1,110 +1,64 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Резюме Developer | Fullstack Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме | Дмитриев Антон Сергеевич</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            cursor: default;
         }
 
         body {
             background: #eef2f5;
             font-family: 'Inter', sans-serif;
-            color: #1a2a3a;
+            color: #1e2a36;
             line-height: 1.45;
             padding: 40px 24px;
-        }
-
-        /* Анимация появления */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .resume-container {
             max-width: 1100px;
             margin: 0 auto;
             background: white;
-            border-radius: 28px;
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: all 0.2s;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 1px solid #dce5ec;
         }
 
-        /* элементы с классом .fade-up будут анимироваться при скролле */
-        .fade-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .fade-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* header section */
         .header {
-            background: #0f2b3d;
+            background: #1e2f3c;
             color: white;
-            padding: 36px 40px 28px 40px;
+            padding: 32px 40px 28px 40px;
+            border-bottom: 2px solid #c9a53b;
         }
 
         .name-title h1 {
-            font-size: 2.6rem;
+            font-size: 2.4rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 10px;
+            letter-spacing: -0.01em;
+            margin-bottom: 8px;
         }
 
         .desired-position {
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 500;
-            color: #cbdbe6;
-            margin-bottom: 18px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .badge-salary {
-            background: #2c4c6c;
-            padding: 6px 14px;
-            border-radius: 40px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            color: #cfdfed;
+            margin-bottom: 16px;
         }
 
         .contact-info {
             display: flex;
             flex-wrap: wrap;
             gap: 24px;
-            margin-top: 20px;
+            margin-top: 18px;
             font-size: 0.9rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 18px;
         }
 
         .contact-info a,
@@ -113,29 +67,21 @@
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            transition: color 0.2s;
+            gap: 8px;
         }
 
-        .contact-info a:hover {
-            color: white;
-        }
-
-        /* main grid */
         .main-grid {
             display: grid;
             grid-template-columns: 1fr 2.2fr;
             gap: 0;
         }
 
-        /* sidebar (left) */
         .sidebar {
-            background: #f8fafc;
+            background: #f9fbfd;
             padding: 32px 28px;
             border-right: 1px solid #e2e8f0;
         }
 
-        /* фото */
         .photo-section {
             text-align: center;
             margin-bottom: 28px;
@@ -146,14 +92,8 @@
             height: 140px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid white;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .avatar:hover {
-            transform: scale(1.02);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            border: 3px solid #c9a53b;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
         .section {
@@ -161,99 +101,70 @@
         }
 
         .section-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #1e4a6b;
-            margin-bottom: 18px;
-            border-left: 4px solid #2c7da0;
-            padding-left: 14px;
+            color: #2c3e4e;
+            border-left: 3px solid #c9a53b;
+            padding-left: 12px;
+            margin-bottom: 16px;
         }
 
         .skill-tag {
             display: inline-block;
             background: white;
             border: 1px solid #cbd5e1;
-            padding: 6px 14px;
-            border-radius: 30px;
-            font-size: 0.8rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
             font-weight: 500;
-            margin: 0 6px 8px 0;
-            transition: all 0.2s ease;
-            color: #0f2b3d;
-        }
-
-        .skill-tag:hover {
-            background: #2c7da0;
-            border-color: #2c7da0;
-            color: white;
-            transform: translateY(-2px);
+            margin: 0 4px 6px 0;
+            color: #1e2a36;
         }
 
         .skill-cat {
             font-weight: 700;
-            margin: 12px 0 8px 0;
+            margin: 12px 0 6px 0;
             font-size: 0.85rem;
-            color: #2c3e50;
-        }
-
-        .skill-cat:first-of-type {
-            margin-top: 0;
+            color: #2c3e4e;
         }
 
         .edu-item {
             margin-bottom: 16px;
         }
-
         .edu-title {
             font-weight: 700;
             margin-bottom: 4px;
         }
-
-        .edu-detail {
+        .edu-detail, .cert-item {
             font-size: 0.85rem;
-            color: #334e68;
+            color: #2c4a6e;
+        }
+        .lang-item {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            line-height: 1.4;
         }
 
-        .lang-item,
-        .cert-item {
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-        }
-
-        /* right content */
         .right-content {
             padding: 32px 36px;
             background: white;
         }
 
         .about-text {
-            background: #f1f9fe;
-            padding: 20px 22px;
-            border-radius: 20px;
+            background: #f4f7fa;
+            padding: 20px 24px;
             margin-bottom: 32px;
             font-size: 0.95rem;
             line-height: 1.5;
-            color: #1e2f3e;
-            transition: all 0.2s;
-        }
-
-        .about-text:hover {
-            background: #e6f2f9;
+            border-left: 3px solid #c9a53b;
         }
 
         .job {
             margin-bottom: 28px;
-            border-bottom: 1px solid #eef2f8;
+            border-bottom: 1px solid #e6edf2;
             padding-bottom: 20px;
-            transition: all 0.2s;
-        }
-
-        .job:hover {
-            background: #fafcff;
-            padding-left: 8px;
-            border-radius: 12px;
         }
 
         .job-header {
@@ -261,35 +172,32 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .job-title {
             font-size: 1.2rem;
             font-weight: 700;
-            color: #0a2942;
+            color: #1e2a36;
         }
 
         .job-date {
             font-size: 0.8rem;
             color: #5a6e7c;
-            font-weight: 500;
         }
 
         .company {
             font-weight: 600;
-            color: #2c7da0;
-            margin-bottom: 12px;
+            color: #2c6b8f;
             display: inline-block;
             font-size: 0.9rem;
+            margin-bottom: 10px;
         }
 
         .job-desc {
             list-style: none;
-            padding-left: 0;
-            margin-top: 12px;
+            margin-top: 10px;
         }
-
         .job-desc li {
             margin-bottom: 8px;
             padding-left: 20px;
@@ -297,113 +205,63 @@
             font-size: 0.9rem;
             line-height: 1.45;
         }
-
         .job-desc li:before {
-            content: "▹";
+            content: "—";
             position: absolute;
             left: 0;
-            color: #2c7da0;
-            font-weight: 600;
+            color: #2c6b8f;
         }
 
         .project-highlight {
-            background: #fef9e6;
-            padding: 12px 16px;
-            border-radius: 14px;
-            margin: 12px 0 4px;
+            background: #fef6e0;
+            padding: 8px 14px;
+            border-radius: 8px;
+            margin-top: 12px;
             font-size: 0.85rem;
-            border-left: 3px solid #e6b12e;
+            border-left: 2px solid #c9a53b;
         }
 
-        hr {
-            margin: 20px 0;
-            border: 0;
-            height: 1px;
-            background: #e2edf2;
+        /* Список проектов с кнопками */
+        .projects-list {
+            margin-top: 12px;
         }
-
-        /* карточки проектов */
-        .projects-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 24px;
-            margin-top: 20px;
+        .project-item {
+            margin-bottom: 24px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 18px;
         }
-
-        .project-card {
-            background: #ffffff;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            border: 1px solid #eef2f8;
-            cursor: pointer;
-        }
-
-        .project-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.15);
-        }
-
-        .project-img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            background: #d9e2ec;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: #2c7da0;
-            transition: transform 0.4s;
-            overflow: hidden;
-
-        }
-
-        .project-img img {
-            max-width: 400px
-        }
-
-        .project-card:hover .project-img {
-            transform: scale(1.02);
-        }
-
-        .project-info {
-            padding: 16px;
-        }
-
-        .project-title {
-            font-weight: 700;
-            font-size: 1.1rem;
+        .project-item strong {
+            font-size: 1rem;
+            color: #1e2a36;
+            display: block;
             margin-bottom: 6px;
-            color: #0f2b3d;
         }
-
         .project-desc {
             font-size: 0.85rem;
-            color: #4a627a;
-            margin-bottom: 12px;
-            line-height: 1.4;
+            color: #2c4a6e;
+            margin-bottom: 6px;
         }
-
-        .project-link {
-            font-size: 0.85rem;
+        .project-tech {
+            font-size: 0.75rem;
+            color: #5b7a9a;
+            margin-bottom: 8px;
+        }
+        .project-detail-link {
+            font-size: 0.8rem;
+            color: #2c6b8f;
+            background: none;
+            border: none;
+            cursor: pointer;
             font-weight: 500;
-            color: #2c7da0;
-            text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            cursor: pointer;
+            padding: 4px 0;
+            transition: opacity 0.2s;
         }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 12px;
+        .project-detail-link:hover {
+            opacity: 0.7;
         }
-
         /* Модальное окно */
         .modal {
             display: none;
@@ -412,619 +270,431 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0,0,0,0.6);
             z-index: 1000;
             justify-content: center;
             align-items: center;
-            backdrop-filter: blur(4px);
+            backdrop-filter: blur(2px);
         }
-
         .modal-content {
             background: white;
-            max-width: 90vw;
+            max-width: 800px;
             width: 90%;
-            border-radius: 28px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            animation: fadeInUp 0.3s ease;
+            box-shadow: 0 20px 35px rgba(0,0,0,0.2);
         }
-
         .modal-header {
-            background: #0f2b3d;
+            background: #1e2f3c;
             color: white;
-            padding: 20px 24px;
+            padding: 18px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .modal-header h3 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 600;
             margin: 0;
         }
-
         .close-modal {
             background: none;
             border: none;
             font-size: 28px;
             cursor: pointer;
             color: white;
-            transition: transform 0.2s;
+            line-height: 1;
         }
-
-        .close-modal:hover {
-            transform: scale(1.1);
-        }
-
         .modal-body {
             padding: 24px;
-            line-height: 1.5;
             max-height: 70vh;
-            overflow: auto;
+            overflow-y: auto;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
-
         .modal-body p {
             margin-bottom: 12px;
         }
-
         .modal-body ul {
             margin-left: 20px;
             margin-bottom: 16px;
         }
 
-        /* Адаптивность */
-        @media (max-width: 780px) {
-            body {
-                padding: 16px;
-            }
-
-            .main-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .sidebar {
-                border-right: none;
-                border-bottom: 1px solid #e2e8f0;
-            }
-
-            .header {
-                padding: 28px 24px;
-            }
-
-            .right-content {
-                padding: 28px 24px;
-            }
-
-            .name-title h1 {
-                font-size: 2rem;
-            }
-
-            .projects-gallery {
-                grid-template-columns: 1fr;
-            }
-
-            .modal-content {
-                width: 95%;
-                margin: 20px;
-            }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .tech-stack .skill-tag {
+            background: #f0f3f7;
+            border: none;
         }
 
-        /* Печать */
+        /* Печатная версия: скрываем модальные кнопки, показываем полные описания */
         @media print {
             body {
                 background: white;
                 padding: 0;
                 margin: 0;
+                font-size: 10pt;
             }
-
             .resume-container {
                 box-shadow: none;
-                border-radius: 0;
+                border: none;
                 max-width: 100%;
             }
-
-            .badge-salary {
-                background: #e9ecef;
-                color: #0f2b3d;
-                border: 1px solid #ccc;
+            .header {
+                background: #1e2f3c;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                color: white;
+                padding: 16px 20px;
             }
-
             .sidebar {
-                background: #f5f5f5;
+                background: #f9fbfd;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
-
-            .contact-info a {
-                color: black;
+            .about-text, .project-highlight {
+                background: #f4f4f4;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
-
-            .project-card {
-                break-inside: avoid;
-                page-break-inside: avoid;
+            .skill-tag {
+                border: 1px solid #aaa;
+                background: white;
             }
-
-            .modal {
+            .project-detail-link {
                 display: none;
             }
-
-            .project-card {
-                cursor: default;
+            /* полные описания для печати */
+            .project-full-description {
+                display: block;
+                margin-top: 12px;
+                font-size: 9pt;
+                color: #1e2a36;
+                border-top: 1px solid #ccc;
+                padding-top: 8px;
             }
-
-            .project-card:hover {
-                transform: none;
+            .project-full-description p, .project-full-description ul {
+                margin: 6px 0;
             }
+            .modal, .modal-content {
+                display: none;
+            }
+        }
 
-            .fade-up {
-                opacity: 1 !important;
-                transform: none !important;
+        /* экранная версия: полные описания скрыты, показываются в модалке */
+        .project-full-description {
+            display: none;
+        }
+
+        @media (max-width: 780px) {
+            body {
+                padding: 16px;
+            }
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+            }
+            .header {
+                padding: 24px 20px;
+            }
+            .right-content {
+                padding: 24px 20px;
+            }
+            .name-title h1 {
+                font-size: 1.8rem;
             }
         }
     </style>
 </head>
-
 <body>
-    <div class="resume-container">
-        <!-- header -->
-        <div class="header fade-up">
-            <div class="name-title">
-                <h1>Дмитриев Антон Сергеевич</h1>
-                <div class="desired-position">
-                    <span>Developer</span>
-                    <span><i class="fas fa-laptop-house"></i> Удаленно / Постоянно</span>
-                </div>
-            </div>
-            <div class="contact-info">
-                <span><i class="fas fa-phone-alt"></i> +7 986 914-96-37</span>
-                <a href="mailto:bar2018ka@gmail.com"><i class="fas fa-envelope"></i> bar2018ka@gmail.com</a>
-                <span><i class="fas fa-map-marker-alt"></i> Удаленная работа, готов к командировкам</span>
-            </div>
+<div class="resume-container">
+    <div class="header">
+        <div class="name-title">
+            <h1>Дмитриев Антон Сергеевич</h1>
+            <div class="desired-position">Fullstack-разработчик | Архитектор | Руководитель группы разработки</div>
         </div>
-
-        <div class="main-grid">
-            <!-- left sidebar: фото, навыки, образование, кибербезопасность -->
-            <div class="sidebar fade-up">
-                <!-- ФОТОГРАФИЯ -->
-                <div class="photo-section">
-                    <img class="avatar" src="./mi.jpg" alt="Дмитриев Антон Сергеевич">
-                    <!-- Здесь можно заменить на реальную ссылку на фото кандидата -->
-                </div>
-
-                <div class="section">
-                    <div class="section-title"><i class="fas fa-code"></i> Ключевые навыки</div>
-                    <div class="skill-cat">Backend & языки</div>
-                    <div>
-                        <span class="skill-tag">PHP (продвинутый)</span>
-                        <span class="skill-tag">.NET / C#</span>
-                        <span class="skill-tag">Python / Django</span>
-                        <span class="skill-tag">Yii / Laravel</span>
-                    </div>
-                    <div class="skill-cat">Базы данных & аналитика</div>
-                    <div>
-                        <span class="skill-tag">MySQL / PostgreSQL</span>
-                        <span class="skill-tag">ClickHouse</span>
-                        <span class="skill-tag">Elasticsearch</span>
-                        <span class="skill-tag">Оптимизация запросов</span>
-                    </div>
-                    <div class="skill-cat">Кибербезопасность & Сети</div>
-                    <div>
-                        <span class="skill-tag">OWASP Top 10</span>
-                        <span class="skill-tag">iptables / nftables</span>
-                        <span class="skill-tag">VPN (WireGuard)</span>
-                        <span class="skill-tag">Восстановление после атак</span>
-                        <span class="skill-tag">Аудит безопасности кода</span>
-                    </div>
-                    <div class="skill-cat">DevOps & Администрирование</div>
-                    <div>
-                        <span class="skill-tag">Linux (Ubuntu/CentOS)</span>
-                        <span class="skill-tag">Docker / Compose</span>
-                        <span class="skill-tag">Nginx / Apache</span>
-                        <span class="skill-tag">ELK Stack</span>
-                        <span class="skill-tag">Zabbix / Prometheus</span>
-                        <span class="skill-tag">Git / CI/CD</span>
-                    </div>
-                    <div class="skill-cat">Frontend</div>
-                    <div>
-                        <span class="skill-tag">HTML5 / CSS3</span>
-                        <span class="skill-tag">JavaScript / jQuery</span>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <div class="section-title"><i class="fas fa-graduation-cap"></i> Образование</div>
-                    <div class="edu-item">
-                        <div class="edu-title">Филиал МАУ им. Сурикова, Казань</div>
-                        <div class="edu-detail">Теория и история искусств (2013, неоконченное высшее)</div>
-                    </div>
-                    <div class="edu-title" style="margin-top: 12px;">Курсы & самообразование</div>
-                    <div class="cert-item">▪ OWASP & безопасность веб-приложений</div>
-                    <div class="cert-item">▪ Linux Professional Institute (в процессе)</div>
-                    <div class="cert-item">▪ ClickHouse: аналитические БД, high-load</div>
-                    <div class="cert-item">▪ Elastic Stack (ELK) – логирование, поиск</div>
-                    <div class="cert-item">▪ ASP.NET Core / Entity Framework</div>
-                </div>
-
-                <div class="section">
-                    <div class="section-title"><i class="fas fa-shield-alt"></i> Безопасность & инфраструктура</div>
-                    <div class="lang-item">✅ Защита от SQLi, XSS, CSRF, безопасные сессии</div>
-                    <div class="lang-item">✅ Настройка межсетевых экранов, VPN, IDS/IPS</div>
-                    <div class="lang-item">✅ Восстановление веб-инфраструктуры после DDoS/взломов</div>
-                    <div class="lang-item">✅ Мониторинг логов, анализ инцидентов (ELK, Zabbix)</div>
-                    <div class="lang-item">✅ Проектирование сетей (VLAN, маршрутизация, DNS/DHCP)</div>
-                </div>
-            </div>
-
-            <!-- right content: опыт, проекты, портфолио -->
-            <div class="right-content">
-                <div class="about-text fade-up">
-                    <p>Fullstack-разработчик с опытом 10 лет, сочетаю экспертизу в веб-разработке (PHP, .NET) с глубокими
-                    компетенциями в области кибербезопасности, администрирования Linux-инфраструктуры и работы с
-                    высоконагруженными аналитическими системами (ClickHouse, Elasticsearch).</p><br>
-                        <p>
-                    Имею успешный опыт работы в Бизнес-школе Сколково (разработка обучающих игр) и с крупным
-                    корпоративным сектором — компания Новатэк (разработка личного кабинета для юридических и физических
-                    лиц). Участвовал в восстановлении веб-инфраструктуры после масштабных кибератак на российский
-                    сегмент интернета, что дало практический опыт в области защиты и экстренного восстановления
-                    высоконагруженных проектов.
-                        </p><br>
-                        <p>
-                    Способен как разрабатывать сложные CRM-системы, интернет-магазины и аналитические платформы, так и
-                    обеспечивать безопасность и стабильность серверной инфраструктуры на всех этапах — от проектирования
-                    архитектуры до мониторинга и реагирования на инциденты. Активно участвую в развитии команды: провожу
-                    технические собеседования, выступаю ментором для младших разработчиков, выстраиваю процессы code
-                    review и передачи знаний.
-                    </p>
-                </div>
-
-                <!-- опыт -->
-                <div class="section">
-                    <div class="section-title fade-up"><i class="fas fa-briefcase"></i> Опыт работы</div>
-
-                    <div class="job fade-up">
-                        <div class="job-header">
-                            <div class="job-title">Бэкенд разработчик</div>
-                            <div class="job-date">Июль 2023 — наст. время</div>
-                        </div>
-                        <div class="company">Afterlogic Rus</div>
-                        <ul class="job-desc">
-                            <li><strong>Бизнес-школа Сколково</strong> – разработка интерактивных обучающих игр (PHP/JS,
-                                сценарная логика, рейтинги).</li>
-                            <li><strong>Новатэк (личный кабинет)</strong> – разработка на .NET Core / C#, интеграция
-                                биллинга, документооборот, безопасность персональных данных.</li>
-                            <li>Разработка и поддержка b2b продуктов на PHP, внедрение OWASP-защиты.</li>
-                            <li>Оптимизация SQL-запросов, рефакторинг легаси кода, миграция на Docker.</li>
-                            <li>Интеграция Elasticsearch для быстрого поиска и аналитики логов.</li>
-                        </ul>
-                    </div>
-
-                    <div class="job fade-up">
-                        <div class="job-header">
-                            <div class="job-title">Web-программист / Системный администратор</div>
-                            <div class="job-date">Сен 2022 — Июль 2023</div>
-                        </div>
-                        <div class="company">Фриланс / ИП (Сколково, Новатэк)</div>
-                        <ul class="job-desc">
-
-                            <li>Настройка серверов Linux, внедрение ClickHouse для аналитики использования кабинета
-                                (миллионы событий).</li>
-                            <li>Построение ELK-стека для логирования и мониторинга производительности.</li>
-                        </ul>
-                        <div class="project-highlight">
-                            ⚡ Результат: снижение времени ответа API на 30%, внедрение защиты от брутфорса и XSS.
-                        </div>
-                    </div>
-
-                    <div class="job fade-up">
-                        <div class="job-header">
-                            <div class="job-title">Web-разработчик</div>
-                            <div class="job-date">Окт 2021 — Сен 2022</div>
-                        </div>
-                        <div class="company">MOStudio (markonline.ru)</div>
-                        <ul class="job-desc">
-                            <li>Разработка CRM-систем, чат-ботов, интернет-магазинов на PHP/Yii и Python/Django.</li>
-                            <li>Настройка Elasticsearch для каталогов с 500k+ товаров.</li>
-                            <li><strong>Восстановление после кибератак</strong> (2022): анализ компрометации,
-                                восстановление из бэкапов, усиление firewall, WAF, реверс-прокси.</li>
-                        </ul>
-                    </div>
-
-                    <div class="job fade-up">
-                        <div class="job-header">
-                            <div class="job-title">Программист-разработчик / Руководитель проектов</div>
-                            <div class="job-date">Янв 2020 — Сен 2021</div>
-                        </div>
-                        <div class="company">ИП Демчемко (bolsche.ru)</div>
-                        <ul class="job-desc">
-                            <li>Контроль полного цикла разработки, написание ТЗ и архитектуры (с учетом security best
-                                practices).</li>
-                            <li>Внедрение ClickHouse для аналитики продаж и поведения пользователей (миллионные
-                                выборки).</li>
-                            <li>Подбор и собеседование персонала, управление командой из 3 разработчиков.</li>
-                        </ul>
-                    </div>
-
-                    <div class="job fade-up">
-                        <div class="job-header">
-                            <div class="job-title">Веб-разработчик</div>
-                            <div class="job-date">Март 2017 — Янв 2019</div>
-                        </div>
-                        <div class="company">Фриланс / частная практика</div>
-                        <ul class="job-desc">
-                            <li>
-                                Разработка сайтов на PHP/WordPress
-                            </li>
-                            <li>
-                                Проекты с Linux-серверами и основами сетевой
-                                безопасности.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- ПРОЕКТЫ С КАРТИНКАМИ (галерея) -->
-                <div class="section">
-                    <div class="section-title fade-up"><i class="fas fa-images"></i> Проекты и портфолио</div>
-                    <div class="projects-gallery">
-
-                        <!-- Карточка проекта 3 (Сколково) -->
-                        <div class="project-card fade-up" data-project="ottokar39">
-                            <div class="project-img">
-                                <img src="./706370907.jpeg" alt="">
-                            </div>
-                            <div class="project-info">
-                                <div class="project-title">ottokar39.ru</div>
-                                <div class="project-desc">Сайт-агрегатор подержанных автомобилей с интеграцией
-                                    специализированных дилерских сервисов и большой системой хранения данных.</div>
-                                <div class="project-link">Подробнее <i class="fas fa-arrow-right"></i></div>
-                            </div>
-                        </div>
-                        <!-- Карточка проекта 4 (Новатэк) -->
-                        <div class="project-card fade-up" data-project="novatek">
-                            <div class="project-img">
-                                <img src="./image copy 2.png" alt="">
-                            </div>
-                            <div class="project-info">
-                                <div class="project-title">Личный кабинет Новатэк</div>
-                                <div class="project-desc">PHP, Laravel, интеграция 1C биллинг для юр/физ лиц, защита
-                                    данных, высокая
-                                    нагрузка.</div>
-                                <div class="project-link">Подробнее <i class="fas fa-arrow-right"></i></div>
-                            </div>
-                        </div>
-                        <div class="project-card fade-up" data-project="anticandida">
-                            <div class="project-img">
-                                <img src="./Group 13.png" alt="">
-                            </div>
-                            <div class="project-info">
-                                <div class="project-title">Anticandida и body-balance</div>
-                                <div class="project-desc">Интернет-магазин и справочник для медицинской компании с
-                                    CRM-системой для учета пациентов.</div>
-                                <div class="project-link">Подробнее <i class="fas fa-arrow-right"></i></div>
-                            </div>
-                        </div>
-
-                        <div class="project-card fade-up" data-project="skolkovo">
-                            <div class="project-img">
-                                <img src="./intro-2.webp" alt="">
-                            </div>
-                            <div class="project-info">
-                                <div class="project-title">Сколково игры</div>
-                                <div class="project-desc">Обучающие игры для Сколковской бизнес-школы (SKOLKOVO) для
-                                    высшего менеджмента, направленные на развитие коммуникаций.</div>
-                                <div class="project-link">Подробнее <i class="fas fa-arrow-right"></i></div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div style="font-size: 0.85rem; color: #3c6578; margin-top: 12px;">* По проектам, отмеченным NDA,
-                        предоставляю дополнительные детали при собеседовании.</div>
-                </div>
-
-                <!-- технологии + преимущества -->
-                <div class="section fade-up">
-                    <div class="section-title"><i class="fas fa-cogs"></i> Технологический стек</div>
-                    <div class="tech-stack">
-                        <span class="skill-tag">PHP / Yii / Laravel</span>
-                        <span class="skill-tag">.NET / C# / ASP.NET Core</span>
-                        <span class="skill-tag">ClickHouse</span>
-                        <span class="skill-tag">Elasticsearch</span>
-                        <span class="skill-tag">MySQL / PostgreSQL</span>
-                        <span class="skill-tag">Docker / Linux</span>
-                        <span class="skill-tag">iptables / VPN</span>
-                        <span class="skill-tag">ELK / Zabbix</span>
-                        <span class="skill-tag">Git / Composer</span>
-                    </div>
-                </div>
-
-                <div class="section fade-up">
-                    <div class="section-title"><i class="fas fa-medal"></i> Ключевые преимущества</div>
-                    <ul class="job-desc" style="margin-top: 0;">
-                        <li>✅ 10 лет коммерческой разработки + экспертиза в кибербезопасности и администрировании</li>
-                        <li>✅ Работа с корпоративными гигантами: Сколково, Новатэк (высокие нагрузки, безопасность,
-                            .NET/PHP), Тинькофф, TEVA</li>
-                        <li>✅ ClickHouse, Elasticsearch – построение аналитики, high‑load поиск и логирование</li>
-                        <li>✅ Практический опыт восстановления инфраструктуры после крупных кибератак (2022)</li>
-                        <li>✅ Готовность к полному циклу: от ТЗ и архитектуры до деплоя и защиты серверов</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="contact-info">
+            <span>📞 +7 986 914-96-37</span>
+            <a href="mailto:bar2018ka@gmail.com">✉ bar2018ka@gmail.com</a>
+            <span>📍 Удаленная работа, готов к командировкам</span>
         </div>
     </div>
 
-    <!-- Модальное окно -->
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 id="modalTitle">Название проекта</h3>
-                <button class="close-modal">&times;</button>
+    <div class="main-grid">
+        <div class="sidebar">
+            <div class="photo-section">
+                <img class="avatar" src="./mi.jpg" alt="Фото">
+                <div style="font-size:0.7rem; color:#5c6f87; margin-top:6px;">Фото для документа</div>
             </div>
-            <div class="modal-body">
-                <div class="modal-text" id="modalBody">
 
+            <div class="section">
+                <div class="section-title">Ключевые навыки</div>
+                <div class="skill-cat">Backend & языки</div>
+                <div><span class="skill-tag">PHP / Laravel / Yii</span><span class="skill-tag">.NET / C#</span><span class="skill-tag">Python / Django</span></div>
+                <div class="skill-cat">Базы данных & аналитика</div>
+                <div><span class="skill-tag">MySQL / PostgreSQL</span><span class="skill-tag">ClickHouse</span><span class="skill-tag">Elasticsearch</span></div>
+                <div class="skill-cat">Кибербезопасность</div>
+                <div><span class="skill-tag">OWASP Top 10</span><span class="skill-tag">iptables / nftables</span><span class="skill-tag">VPN (WireGuard)</span><span class="skill-tag">Восстановление после атак</span></div>
+                <div class="skill-cat">DevOps & Администрирование</div>
+                <div><span class="skill-tag">Linux (Ubuntu/CentOS)</span><span class="skill-tag">Docker / Compose</span><span class="skill-tag">Nginx</span><span class="skill-tag">ELK Stack</span><span class="skill-tag">Zabbix / Prometheus</span><span class="skill-tag">Git / CI/CD</span></div>
+                <div class="skill-cat">Frontend</div>
+                <div><span class="skill-tag">HTML5 / CSS3</span><span class="skill-tag">JavaScript / jQuery</span></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Образование</div>
+                <div class="edu-item">
+                    <div class="edu-title">Филиал МАУ им. Сурикова, Казань</div>
+                    <div class="edu-detail">Теория и история искусств (2013, неоконченное высшее)</div>
                 </div>
-                <!-- сюда подгружается описание -->
+                <div style="font-weight:600; margin-top:10px;">Дополнительное образование</div>
+                <div class="cert-item">OWASP & безопасность веб-приложений</div>
+                <div class="cert-item">Linux Professional Institute (в процессе)</div>
+                <div class="cert-item">ClickHouse: аналитические БД, high‑load</div>
+                <div class="cert-item">Elastic Stack – логирование, поиск</div>
+                <div class="cert-item">ASP.NET Core / Entity Framework</div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Компетенции в ИБ</div>
+                <div class="lang-item">✓ Защита от SQLi, XSS, CSRF, безопасные сессии</div>
+                <div class="lang-item">✓ Настройка межсетевых экранов, VPN, IDS/IPS</div>
+                <div class="lang-item">✓ Восстановление инфраструктуры после DDoS/взломов</div>
+                <div class="lang-item">✓ Мониторинг логов, анализ инцидентов (ELK, Zabbix)</div>
+                <div class="lang-item">✓ Проектирование сетей (VLAN, маршрутизация)</div>
+            </div>
+        </div>
+
+        <div class="right-content">
+            <div class="about-text">
+                <p><strong>Fullstack-разработчик с опытом 10 лет</strong>, сочетаю экспертизу в веб-разработке (PHP, .NET) с глубокими компетенциями в области кибербезопасности, администрирования Linux-инфраструктуры и работы с высоконагруженными аналитическими системами (ClickHouse, Elasticsearch).</p>
+                <p style="margin-top:12px;">Имею успешный опыт работы в Бизнес-школе Сколково (разработка обучающих игр) и с крупным корпоративным сектором — компания Новатэк (разработка личного кабинета для юридических и физических лиц). Участвовал в восстановлении веб-инфраструктуры после масштабных кибератак на российский сегмент интернета, что дало практический опыт в области защиты и экстренного восстановления высоконагруженных проектов.</p>
+                <p style="margin-top:12px;">Способен как разрабатывать сложные CRM-системы, интернет-магазины и аналитические платформы, так и обеспечивать безопасность и стабильность серверной инфраструктуры на всех этапах. Активно участвую в развитии команды: провожу технические собеседования, выступаю ментором для младших разработчиков, выстраиваю процессы code review и передачи знаний.</p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Опыт работы</div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Бэкенд разработчик</div>
+                        <div class="job-date">Июль 2023 — наст. время</div>
+                    </div>
+                    <div class="company">Afterlogic Rus</div>
+                    <ul class="job-desc">
+                        <li>Бизнес-школа Сколково – разработка интерактивных обучающих игр (PHP/JS, сценарная логика, рейтинги).</li>
+                        <li>Новатэк (личный кабинет) – разработка на .NET Core / C#, интеграция биллинга, документооборот, безопасность персональных данных.</li>
+                        <li>Разработка и поддержка b2b продуктов на PHP, внедрение OWASP-защиты.</li>
+                        <li>Оптимизация SQL-запросов, рефакторинг легаси кода, миграция на Docker.</li>
+                        <li>Интеграция Elasticsearch для быстрого поиска и аналитики логов.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Web-программист / Системный администратор</div>
+                        <div class="job-date">Сен 2022 — Июль 2023</div>
+                    </div>
+                    <div class="company">Фриланс / ИП (Сколково, Новатэк)</div>
+                    <ul class="job-desc">
+                        <li>Настройка серверов Linux, внедрение ClickHouse для аналитики использования кабинета (миллионы событий).</li>
+                        <li>Построение ELK-стека для логирования и мониторинга производительности.</li>
+                    </ul>
+                    <div class="project-highlight">Результат: снижение времени ответа API на 30%, внедрение защиты от брутфорса и XSS.</div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Web-разработчик</div>
+                        <div class="job-date">Окт 2021 — Сен 2022</div>
+                    </div>
+                    <div class="company">MOStudio (markonline.ru)</div>
+                    <ul class="job-desc">
+                        <li>Разработка CRM-систем, чат-ботов, интернет-магазинов на PHP/Yii и Python/Django.</li>
+                        <li>Настройка Elasticsearch для каталогов с 500k+ товаров.</li>
+                        <li>Восстановление после кибератак (2022): анализ компрометации, восстановление из бэкапов, усиление firewall, WAF.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Программист-разработчик / Руководитель проектов</div>
+                        <div class="job-date">Янв 2020 — Сен 2021</div>
+                    </div>
+                    <div class="company">ИП Демчемко (bolsche.ru)</div>
+                    <ul class="job-desc">
+                        <li>Контроль полного цикла разработки, написание ТЗ и архитектуры (с учетом security best practices).</li>
+                        <li>Внедрение ClickHouse для аналитики продаж и поведения пользователей (миллионные выборки).</li>
+                        <li>Подбор и собеседование персонала, управление командой из 3 разработчиков.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Веб-разработчик</div>
+                        <div class="job-date">Март 2017 — Янв 2019</div>
+                    </div>
+                    <div class="company">Фриланс / частная практика</div>
+                    <ul class="job-desc"><li>Разработка сайтов на PHP/WordPress, проекты с Linux-серверами и основами сетевой безопасности.</li></ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Ключевые проекты</div>
+                <div class="projects-list">
+                    <div class="project-item" data-project="ottokar39">
+                        <strong>ottokar39.ru — агрегатор автомобилей с пробегом</strong>
+                        <div class="project-desc">Высоконагруженная платформа: парсинг объявлений, интеграция с дилерскими CRM, VIN-отчеты, Elasticsearch, ClickHouse.</div>
+                        <div class="project-tech">PHP, Laravel, PostgreSQL, ClickHouse, Redis, Docker, Kubernetes</div>
+                        <button class="project-detail-link">Подробнее →</button>
+                        <div class="project-full-description">
+                            <h4>Назначение проекта</h4>
+                            <p>Разработка высоконагруженного веб-сайта-агрегатора по продаже автомобилей с пробегом. Цель — объединить предложения от профессиональных дилеров и частных лиц, обеспечивая прозрачность сделки и автоматизацию для дилеров.</p>
+                            <h4>Ключевые модули</h4>
+                            <ul>
+                                <li><strong>Ядро агрегатора:</strong> автоматический импорт объявлений, мультипараметрический поиск с Elasticsearch, расширенный отчет по VIN.</li>
+                                <li><strong>Интеграция с дилерскими сервисами:</strong> синхронизация остатков, DMS, финансовые сервисы, эскроу.</li>
+                                <li><strong>Big Data & DWH:</strong> ClickHouse для аналитики, горизонтальное масштабирование, ценовой советник на основе ML.</li>
+                            </ul>
+                            <p><strong>Результат:</strong> единая экосистема для покупателей и дилеров, масштабирование до сотен тысяч посещений в сутки.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-item" data-project="novatek">
+                        <strong>Личный кабинет Новатэк</strong>
+                        <div class="project-desc">Биллинговая система для юр./физ. лиц, интеграция с 1С, защита данных (152-ФЗ), высокая нагрузка.</div>
+                        <div class="project-tech">PHP/Laravel, .NET Core, PostgreSQL, ClickHouse, RabbitMQ, Kubernetes</div>
+                        <button class="project-detail-link">Подробнее →</button>
+                        <div class="project-full-description">
+                            <p><strong>Назначение:</strong> централизованная биллинговая платформа для автоматизации расчетов с клиентами — физическими и юридическими лицами.</p>
+                            <ul>
+                                <li>Управление контрагентами, гибкая тарификация, платежный шлюз, рекуррентные платежи.</li>
+                                <li>Интеграция с 1С: двусторонний обмен счетами, актами, статусами оплаты.</li>
+                                <li>Защита данных: шифрование ПДн, аудит, соответствие 152-ФЗ и 54-ФЗ.</li>
+                                <li>Архитектура высокой нагрузки: горизонтальное масштабирование, очереди, кэширование Redis.</li>
+                            </ul>
+                            <p>Обеспечена работа с тысячами транзакций в минуту и полная синхронизация с корпоративным учетом.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-item" data-project="anticandida">
+                        <strong>Anticandida & Body-balance</strong>
+                        <div class="project-desc">Интернет-магазин медтоваров + справочник врачей + CRM для учета пациентов. Онлайн-запись, рецептурный отпуск.</div>
+                        <div class="project-tech">PHP, Laravel, MySQL, Redis, Vue.js, 1C</div>
+                        <button class="project-detail-link">Подробнее →</button>
+                        <div class="project-full-description">
+                            <p>Единая цифровая платформа для медицинской компании, объединяющая интернет-магазин, справочник услуг/врачей и CRM-систему.</p>
+                            <ul>
+                                <li><strong>Интернет-магазин:</strong> каталог медтоваров, поиск по МНН, рецептурный отпуск, интеграция с аптечным складом.</li>
+                                <li><strong>Справочник:</strong> карточки врачей с расписанием, онлайн-запись, статьи.</li>
+                                <li><strong>CRM:</strong> единая карточка пациента, управление расписанием, привязка заказов из магазина, финансовый учет.</li>
+                            </ul>
+                            <p>Результат: полная автоматизация взаимодействия с пациентами, рост продаж товаров и услуг, сокращение ручного труда.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-item" data-project="skolkovo">
+                        <strong>Обучающие игры для Сколковской бизнес-школы</strong>
+                        <div class="project-desc">Симуляции для программ EMBA/MBA: ролевые переговоры, динамические сценарии, система рейтингов, WebSockets.</div>
+                        <div class="project-tech">PHP, Node.js, MySQL, WebSockets, Docker</div>
+                        <button class="project-detail-link">Подробнее →</button>
+                        <div class="project-full-description">
+                            <p>Серия иммерсивных обучающих игр для развития коммуникативных компетенций топ-менеджеров: стратегические переговоры, фасилитация, управление конфликтами.</p>
+                            <ul>
+                                <li>Ролевые симуляторы переговоров с закрытыми ролями и дебрифингом.</li>
+                                <li>Бизнес-симуляции с динамическим сюжетом, где качество коммуникаций влияет на результаты.</li>
+                                <li>Видео-тренажеры с AI-анализом выступлений (темп речи, контакт).</li>
+                                <li>Административная панель для управления сценариями и отслеживания прогресса.</li>
+                            </ul>
+                            <p>Игры успешно применяются в программах Executive Education, повышая вовлеченность и укрепляя нетворкинг участников.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="font-size:0.8rem; margin-top:12px; color:#5a6e7c;">* По проектам, отмеченным NDA, предоставляю детали при собеседовании.</div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Технологический стек (основной)</div>
+                <div class="tech-stack">
+                    <span class="skill-tag">PHP / Laravel / Yii</span>
+                    <span class="skill-tag">.NET / C# / ASP.NET Core</span>
+                    <span class="skill-tag">ClickHouse</span>
+                    <span class="skill-tag">Elasticsearch</span>
+                    <span class="skill-tag">MySQL / PostgreSQL</span>
+                    <span class="skill-tag">Docker / Linux</span>
+                    <span class="skill-tag">iptables / VPN</span>
+                    <span class="skill-tag">ELK / Zabbix</span>
+                    <span class="skill-tag">Git / CI/CD</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Ключевые преимущества</div>
+                <ul class="job-desc">
+                    <li>10 лет коммерческой разработки + экспертиза в кибербезопасности и администрировании</li>
+                    <li>Работа с корпоративными гигантами: Сколково, Новатэк (высокие нагрузки, безопасность)</li>
+                    <li>ClickHouse, Elasticsearch – построение аналитики, high‑load поиск и логирование</li>
+                    <li>Практический опыт восстановления инфраструктуры после крупных кибератак (2022)</li>
+                    <li>Готовность к полному циклу: от ТЗ и архитектуры до деплоя и защиты серверов</li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 
-    <script>
-        // Данные проектов для модальных окон
-        const projectsData = {
-            ottokar39: {
-                title: "ottokar39.ru",
-                description: `
-                    <h2>Назначение проекта:</h2>
-                    <p>Разработка высоконагруженного веб-сайта-агрегатора (платформы)
-                    по продаже автомобилей с пробегом.
-                    Основная цель — объединить предложения от профессиональных дилеров и частных лиц в единой экосистеме, 
-                    обеспечивая пользователю максимальную прозрачность сделки, а дилерам — мощные инструменты для автоматизации бизнеса.</p>
-                    <p>Ключевые функциональные модули:<p>
-<ul><li>1. Ядро агрегатора (Frontend & Backend):
-Сбор и парсинг данных: Автоматический импорт объявлений из внешних источников (сайты дилеров, классифайды) и ручное размещение.
-Умный поиск и фильтрация: Мультипараметрический поиск с учетом геолокации, истории обслуживания, количества владельцев, наличия ДТП. Использование полнотекстового поиска (Elasticsearch) для мгновенных результатов.
-Карточка автомобиля: Расширенный отчет на основе VIN-номера (история регистраций, участие в ДТП, пробег, залоги в банках).</li>
+<!-- Модальное окно -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modalTitle"></h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+    </div>
+</div>
 
-<li>2. Интеграция со специализированными дилерскими сервисами (API):
-Платформа не просто хранит объявления, а интегрируется в CRM- и ERP-системы дилерских центров:
-Синхронизация остатков: Автоматическое обновление статусов (в наличии/продано) при изменении в учетной системе дилера.
-DMS (Дилерские системы управления): Интеграция для выгрузки автомобилей напрямую из складских программ дилера без участия менеджера.
-Финансовые сервисы: Подключение модулей скоринга и кредитования (банки-партнеры), расчет каско и ОСАГО, сервисы trade-in с автоматической оценкой.
-Логистика и безопасность: Интеграция с сервисами проверки юр. чистоты автомобиля, а также с платформами доставки автовозом и эскроу-сервисами (безопасные сделки).</li>
+<script>
+    // Функция открытия модалки: ищем полное описание внутри родительского project-item
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    const closeBtn = document.querySelector('.close-modal');
 
-<li>3. Большая система хранения данных (Big Data & DWH):
-Для обеспечения стабильности и аналитики реализуется масштабируемое хранилище:
-Архитектура: Использование комбинации реляционных баз данных (PostgreSQL) для транзакций и колоночных баз (ClickHouse) или Data Lake для аналитики.
-Масштабируемость: Горизонтальное масштабирование для обработки миллионов объявлений и высокого трафика (сотни тысяч уникальных посетителей в сутки).
-Аналитика и ценообразование: На оfvснове накопленных исторических данных система строит динамику цен, предсказывает ликвидность автомобиля и рекомендует дилерам оптимальную цену продажи (автоматический ценовой советник).
-Data Mining: Хранение истории просмотров, кликов и поведения пользователей для построения рекомендательных систем ("Вам также может понравиться").
-</li></ul>
-<p>
-Результат внедрения:
-Создание единой экосистемы, где покупатель получает доступ к верифицированным автомобилям от профессиональных дилеров с полной историей, а дилеры автоматизируют процесс продаж, получают инструменты для динамического управления ценами и расширяют географию сбыта за счет федерального охвата аудитории.
-</p>
-                `
-            },
-            anticandida: {
-                title: "Anticandida и Body-balance",
-                description: `
-                    <p>Назначение проекта:</p>
-<p>Создание единой цифровой платформы для медицинской компании, объединяющей:</p>
-<p>Интернет-магазин — для продажи медицинских товаров (лекарства, средства реабилитации, косметика, медтехника) с возможностью заказа с доставкой или самовывозом.</p>
-<p>Справочник — структурированную базу знаний (услуги, врачи, отделения, статьи), помогающую пациентам ориентироваться в деятельности компании.</p>
-<p>CRM-систему — для комплексного учета пациентов, управления взаимодействиями, записи на прием, ведения истории обращений и интеграции с медицинскими информационными системами (МИС).</p><br>
-<p>Единая экосистема «сайт + интернет-магазин + CRM» позволяет:</p>
-<ul><li>
-Пациентам — быстро находить информацию, записываться к врачу, покупать товары в одном месте.
-</li>
-<li>
-Врачам — видеть полную историю пациента, назначать препараты и процедуры, не покидая рабочего места.
-</li>
-<li>
-Администраторам и менеджерам — вести учет без дублирования данных, сократить время на обработку звонков и записей.
-</li>
-<li>
-Руководству — получать прозрачную аналитику по продажам товаров и услуг, загрузке персонала и финансовым показателям.
-</li></ul>
-                `
-            },
-            skolkovo: {
-                title: "Обучающие игры (Сколково)",
-                description: `
-                    <p>Цель проекта:
-Разработка серии иммерсивных обучающих игр (деловых симуляций, ролевых игр, кейсов) для программ Executive Education (EMBA, MBA, открытые программы) Сколковской бизнес-школы. Игры нацелены на развитие ключевых коммуникативных компетенций топ-менеджеров: стратегические переговоры, фасилитация, управление конфликтами, публичные выступления, выстраивание эффективных команд и кросс-функциональное взаимодействие.</p>
-                    <ul>
-                        <li>Разработка игровых механик на PHP/JS с ветвлением сценариев и системой оценки.</li>
-                        <li>Интеграция с LMS-платформой для отслеживания прогресса слушателей.</li>
-                        <li>Реализация рейтингов, достижений, асинхронных обновлений (WebSockets).</li>
-                        <li>Создание админ-панели для управления контентом и сценариями.</li>
-                        <li>Оптимизация производительности для одновременной работы сотен пользователей.</li>
-                    </ul>
-                    <p>Технологии: PHP, JavaScript, Node.js, MySQL, Redis, Docker, WebSockets.</p>
-                    <p><i>По NDA детали уточняются при собеседовании.</i></p>
-                `
-            },
-            novatek: {
-                title: "Личный кабинет Новатэк",
-                description: `
-                    <p>Назначение проекта: </br>
-Создание централизованной биллинговой платформы для автоматизации расчетов с клиентами — как физическими, так и юридическими лицами. Система обеспечивает полный жизненный цикл начислений, выставления счетов, учета платежей, интеграции с учетными системами (1С) и формирования отчетности. Ключевые требования: работа под высокой нагрузкой (тысячи транзакций в минуту), соответствие требованиям законодательства о защите данных (152-ФЗ, 54-ФЗ, КИИ) и надежная интеграция с внешними сервисами.</p>
-                    <p>Технологический стек</p>
-                    <ul><li>
-Backend: PHP 8.x, Laravel (или Laravel Octane для повышения производительности)
-</li><li>
-Базы данных: PostgreSQL (основная), Redis (кэш, очереди, сессии), ClickHouse (аналитика больших объемов транзакций)
-</li><li>
-Очереди и обработка: Laravel Horizon / RabbitMQ для асинхронной обработки платежей, генерации документов, интеграции с 1С
-</li><li>
-API: REST + OpenAPI (Swagger) для внешних систем, возможен GraphQL для сложных запросов
-</li><li>
-Инфраструктура: Docker, балансировщики нагрузки (Nginx), горизонтальное масштабирование (Kubernetes), CDN для статики</li></ul>
-                    <p><i>По NDA детали уточняются при собеседовании.</i></p>
-                `
-            }
-        };
-
-        // Открытие модального окна
-        function openModal(projectId) {
-            const modal = document.getElementById('projectModal');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalBody = document.getElementById('modalBody');
-            const data = projectsData[projectId];
-            if (data) {
-                modalTitle.innerText = data.title;
-                modalBody.innerHTML = data.description;
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            }
+    function openModal(projectItem) {
+        const titleElem = projectItem.querySelector('strong');
+        const fullDescDiv = projectItem.querySelector('.project-full-description');
+        if (titleElem && fullDescDiv) {
+            modalTitle.innerText = titleElem.innerText;
+            modalBody.innerHTML = fullDescDiv.innerHTML;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         }
+    }
 
-        function closeModal() {
-            const modal = document.getElementById('projectModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = '';
-        }
+    function closeModalFunc() {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
 
-        // Добавляем обработчики на карточки проектов
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('click', (e) => {
-                // предотвращаем клик по ссылке внутри (если она есть)
-                if (e.target.closest('.project-link')) {
-                    e.preventDefault();
-                }
-                const projectId = card.getAttribute('data-project');
-                if (projectId && projectsData[projectId]) {
-                    openModal(projectId);
-                }
-            });
+    // Навешиваем обработчики на все кнопки "Подробнее"
+    document.querySelectorAll('.project-detail-link').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const projectItem = btn.closest('.project-item');
+            if (projectItem) openModal(projectItem);
         });
+    });
 
-        // Закрытие модального окна
-        document.querySelector('.close-modal').addEventListener('click', closeModal);
-        window.addEventListener('click', (e) => {
-            const modal = document.getElementById('projectModal');
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        // Анимация при скролле (Intersection Observer)
-        const fadeElements = document.querySelectorAll('.fade-up');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-
-        fadeElements.forEach(el => observer.observe(el));
-
-        // Для Safari и старых браузеров – добавим visible сразу, если нет поддержки
-        if (!window.IntersectionObserver) {
-            fadeElements.forEach(el => el.classList.add('visible'));
-        }
-    </script>
+    closeBtn.addEventListener('click', closeModalFunc);
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) closeModalFunc();
+    });
+</script>
 </body>
-
 </html>
